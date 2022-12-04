@@ -3,7 +3,6 @@ import Cocoa
 infix operator ⊂∨⊃
 infix operator ∩
 
-// 
 extension ClosedRange {
 	static func ⊂∨⊃(lhs: Self, rhs: Self) -> Bool {
 		rhs.clamped(to: lhs) == rhs || lhs.clamped(to: rhs) == lhs
