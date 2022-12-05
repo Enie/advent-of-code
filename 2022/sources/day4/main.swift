@@ -35,7 +35,6 @@ public func day4() {
 		.filter { $0 }
 		
 	let overlapping = pairs
-		// .map { $0.0.overlaps($0.1) }
 		.map( ∩ )
 		.filter { $0 }
 
