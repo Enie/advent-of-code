@@ -17,8 +17,9 @@ func simulate(_ knots: inout [simd_float2], _ motions: [String]) -> Int {
 	motions.forEach { motion in
 		let tokens = motion.components(separatedBy: .whitespaces)
 		let direction = vector(from: tokens[0])
-		
-		for _ in 1...(Int(tokens[1])!) {
+		let steps = Int(tokens[1])!
+
+		for _ in 1...steps {
 			var head = knots[0]
 			head = head + direction
 			knots[0] = head
